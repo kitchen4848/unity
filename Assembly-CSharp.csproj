@@ -113,12 +113,13 @@
      <Compile Include="Assets\LeapMotion\Scripts\VR\VRHeightOffset.cs" />
      <Compile Include="Assets\PlayerController.cs" />
      <Compile Include="Assets\PlayerMotor.cs" />
+     <Compile Include="Assets\ReadArduino.cs" />
+     <Compile Include="Assets\ReadArduinoThread.cs" />
      <Compile Include="Assets\Rotation.cs" />
      <Compile Include="Assets\Scripts\CameraEditorControl.cs" />
      <Compile Include="Assets\Scripts\EnemyNavigation.cs" />
      <Compile Include="Assets\Scripts\ShootingScript.cs" />
      <Compile Include="Assets\Scripts\SpawnScript.cs" />
-     <Compile Include="Assets\Scripts\TowerHealth.cs" />
      <None Include="Assets\Plugins\donotdelete.txt" />
      <None Include="Assets\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />
      <None Include="Assets\LeapMotion\Resources\LeapCG.cginc" />
