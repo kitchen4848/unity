@@ -51,12 +51,12 @@ public class ReadArduinoThread : MonoBehaviour
         LeftCrosshair.transform.localPosition = new Vector3(Mathf.Clamp(LeftCrosshair.transform.localPosition.x, -0.8f, 0.4f), Mathf.Clamp(LeftCrosshair.transform.localPosition.y, -0.55f, 1.0f), -0.29386f);
         Left.Move(_velocity + Left_velocity);
 
-        if (Input.GetKeyDown("space") || isLeftShoot)
+        if (Input.GetMouseButtonDown(0)|| isLeftShoot)
         {
             s.Shoot(LeftCrosshair);
             isLeftShoot = false;
         }
-        else if (Input.GetKeyDown("space") || isRightShoot)
+        else if (Input.GetMouseButtonDown(1) || isRightShoot)
         {
             s.Shoot(RightCrosshair);
             isRightShoot = false;
