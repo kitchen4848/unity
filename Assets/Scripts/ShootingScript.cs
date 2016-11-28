@@ -35,6 +35,7 @@ public class ShootingScript : MonoBehaviour
 
 				if (rayHit.transform.tag == "Enemy")
 					Destroy(rayHit.transform.gameObject);
+                Debug.DrawLine(origin, transform.forward,Color.red);
 			}
             isShoot = false;
 		}
@@ -44,18 +45,16 @@ public class ShootingScript : MonoBehaviour
         origin = crosshair.transform.position;
         if (crosshair.name.Equals("LeftCrosshair"))
         {
-            origin.x -= 2;
             Debug.Log("LeftCrosshair");
 
         }
         else if (crosshair.name.Equals("RightCrosshair"))
         {
-            origin.x += 2;
             Debug.Log("RightCrosshair");
 
         }
 
-        Instantiate(bullet,origin,transform.rotation);
+    //    Instantiate(bullet,origin,transform.rotation);
 
     }
 }

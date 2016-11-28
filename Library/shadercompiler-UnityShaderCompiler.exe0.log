@@ -1,34 +1,14 @@
 Base path: C:/Program Files/Unity/Editor/Data
 Cmd: getPlatforms
-Cmd: preprocess
-  insize=770 outsize=285 ok=1
-Cmd: preprocess
-  insize=862 outsize=1702 ok=1
-Cmd: preprocess
-  insize=5426 outsize=2271 ok=1
-Cmd: preprocess
-  insize=2078 outsize=935 ok=1
-Cmd: preprocess
-  insize=1060 outsize=1581 ok=1
-Cmd: preprocess
-  insize=1651 outsize=707 ok=1
-Cmd: preprocess
-  insize=13365 outsize=2743 ok=1
-Cmd: preprocess
-  insize=948 outsize=336 ok=1
-Cmd: preprocess
-  insize=652 outsize=1696 ok=1
-Cmd: preprocess
-  insize=12498 outsize=2620 ok=1
-Cmd: preprocess
-  insize=1342 outsize=543 ok=1
-Cmd: preprocess
-  insize=1968 outsize=620 ok=1
-Cmd: preprocess
-  insize=444 outsize=232 ok=1
-Cmd: preprocess
-  insize=906 outsize=294 ok=1
-Cmd: preprocess
-  insize=651 outsize=317 ok=1
-Cmd: preprocess
-  insize=821 outsize=283 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=591 outsize=1050 kw=_EMISSION pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=591 outsize=1354 kw=_EMISSION pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=982 outsize=2338 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_COMBINED DYNAMICLIGHTMAP_ON _EMISSION pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=982 outsize=5730 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_COMBINED DYNAMICLIGHTMAP_ON _EMISSION pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=982 outsize=2162 kw=DIRECTIONAL LIGHTMAP_OFF DIRLIGHTMAP_COMBINED DYNAMICLIGHTMAP_ON _EMISSION pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=982 outsize=5578 kw=DIRECTIONAL LIGHTMAP_OFF DIRLIGHTMAP_COMBINED DYNAMICLIGHTMAP_ON _EMISSION pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING ok=1

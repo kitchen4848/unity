@@ -127,7 +127,6 @@
      <Compile Include="Assets\ReadArduino.cs" />
      <Compile Include="Assets\ReadArduinoThread.cs" />
      <Compile Include="Assets\Rotation.cs" />
-     <Compile Include="Assets\Scripts\CameraEditorControl.cs" />
      <Compile Include="Assets\Scripts\EnemyNavigation.cs" />
      <Compile Include="Assets\Scripts\ShootingScript.cs" />
      <Compile Include="Assets\Scripts\SpawnScript.cs" />
