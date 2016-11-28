@@ -3,16 +3,13 @@
 public class ShootingScript : MonoBehaviour
 {
 	public ParticleSystem impactEffect;	
-	AudioSource gunFireAudio;			
+	public AudioSource gunFireAudio;			
 	RaycastHit rayHit;					
     bool isShoot = false;
     Vector3 origin;
     Vector3 dir;
-    public GameObject bullet;
     void Start()
 	{
-
-        gunFireAudio = GameObject.Find("Camera").GetComponent<AudioSource>();
 
 	}
 
@@ -20,10 +17,8 @@ public class ShootingScript : MonoBehaviour
       if (isShoot)
         {
             Debug.Log("Shoot");
-
-			gunFireAudio.Stop();
-			gunFireAudio.Play();
-
+            gunFireAudio.Stop();
+            gunFireAudio.Play();
             if (Physics.Raycast(origin, transform.forward, out rayHit, 100f))
             {
 
@@ -35,12 +30,12 @@ public class ShootingScript : MonoBehaviour
 
                 if (rayHit.transform.tag == "Enemy")
                     Destroy(rayHit.transform.gameObject);
-                Debug.DrawLine(origin, transform.forward, Color.red);
+                Debug.DrawLine(origin, rayHit.point, Color.red);
             }
             else
              { Vector3 temp = origin;
                 temp.z +=100f;
-                Debug.DrawLine(origin, temp, Color.white);
+                Debug.DrawLine(origin, temp, Color.blue);
             }
             isShoot = false;
 		}
@@ -48,16 +43,7 @@ public class ShootingScript : MonoBehaviour
      public void Shoot(GameObject crosshair) {
         isShoot = true;
         origin = crosshair.transform.position;
-        if (crosshair.name.Equals("LeftCrosshair"))
-        {
-            Debug.Log("LeftCrosshair");
-
-        }
-        else if (crosshair.name.Equals("RightCrosshair"))
-        {
-            Debug.Log("RightCrosshair");
-
-        }
+ 
 
  
     }

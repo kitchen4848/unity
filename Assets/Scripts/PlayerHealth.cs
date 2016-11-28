@@ -2,19 +2,19 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class TowerHealth : MonoBehaviour
+public class PlayerHealth : MonoBehaviour
 {
 	public int numberOfLives = 3;	
 	public Image damageImage;		
 
     int currentLives;				
-	AudioSource damageAudio;		
+	public AudioSource damageAudio;		
 	bool alive = true;				
 
     void Awake()
 	{
         currentLives = numberOfLives;
-		damageAudio = GetComponent<AudioSource>();
+
     }
 
 	void OnTriggerEnter(Collider other)
@@ -25,7 +25,8 @@ public class TowerHealth : MonoBehaviour
 
 		Destroy(other.gameObject);
         currentLives -= 1;
-	//	damageAudio.Play();
+        damageAudio.Stop();
+        damageAudio.Play();
 
 		if(currentLives <= 0)
 		{
