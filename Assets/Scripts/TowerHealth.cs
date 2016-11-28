@@ -4,12 +4,12 @@ using UnityEngine.UI;
 
 public class TowerHealth : MonoBehaviour
 {
-	public int numberOfLives = 3;	//設定塔的血有多少
-	public Image damageImage;		//死掉的畫面
+	public int numberOfLives = 3;	
+	public Image damageImage;		
 
-    int currentLives;				//目前血量
-	AudioSource damageAudio;		//音效
-	bool alive = true;				//生或死
+    int currentLives;				
+	AudioSource damageAudio;		
+	bool alive = true;				
 
     void Awake()
 	{
@@ -19,18 +19,16 @@ public class TowerHealth : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)
 	{
-		//當敵人碰到塔就受傷
+
 		if (other.tag != "Enemy" || !alive)
 			return;
 
 		Destroy(other.gameObject);
         currentLives -= 1;
-		damageAudio.Play();
+	//	damageAudio.Play();
 
-		//如果沒血了
 		if(currentLives <= 0)
 		{
-			//死亡重生3秒
 			alive = false;
             if (damageImage)
             {
@@ -39,14 +37,12 @@ public class TowerHealth : MonoBehaviour
                 damageImage.color = col;
             }
 
-			//重新開始
 			Invoke("Restart", 3f);
 		}
 	}
 
 	void Restart()
 	{
-		//重置畫面
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         for (int i = 0; i < enemies.Length; i++)
             Destroy(enemies[i]);

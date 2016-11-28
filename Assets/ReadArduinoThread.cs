@@ -31,8 +31,12 @@ public class ReadArduinoThread : MonoBehaviour
     {
 
         float _zMov = Input.GetAxisRaw("Vertical");
-        Vector3 _movHorizontal = transform.right * _xMov;
+        Vector3 _movHorizontal = new Vector3 (0,0,0);
         Vector3 _movVertical = transform.forward * _zMov;
+
+        Vector3 rotation = new Vector3(0, 1, 0);
+        rotation.y *= _xMov;
+        transform.Rotate(rotation, Time.deltaTime * 50f);
 
         Vector3 _velocity = (_movHorizontal + _movVertical).normalized * speed;
         motor.Move(_velocity);
@@ -84,27 +88,33 @@ public class ReadArduinoThread : MonoBehaviour
             data = read.Split(' ');
 
             if (data[0].Equals("0"))
+            {
                 _xMov = 1;
+            }
             else if (data[0].Equals("1"))
+            {
                 _xMov = -1;
+            }
             else if (data[0].Equals("2"))
-                _xMov = 0;
+            {
+                 _xMov = 0;
+            }
 
             if (data[1].Equals("1"))
                 isRightShoot = true;
 
 
             if (data[2].Equals("0"))
-                Right_xMov = 1;
+                Right_xMov = 0.000015f; 
             else if (data[2].Equals("1"))
-                Right_xMov = -1;
+                Right_xMov = -0.000015f;
             else if (data[2].Equals("2"))
                 Right_xMov = 0;
 
             if (data[3].Equals("0"))
-                Right_yMov = 1;
+                Right_yMov = 0.000015f;
             else if (data[3].Equals("1"))
-                Right_yMov = -1;
+                Right_yMov = -0.000015f;
             else if (data[3].Equals("2"))
                 Right_yMov = 0;
 
@@ -112,16 +122,16 @@ public class ReadArduinoThread : MonoBehaviour
                 isLeftShoot = true;
 
             if (data[5].Equals("0"))
-                Left_yMov = 1;
+                Left_yMov = 0.000015f;
             else if (data[5].Equals("1"))
-                Left_yMov = -1;
+                Left_yMov = -0.000015f;
             else if (data[5].Equals("2"))
                 Left_yMov = 0;
 
             if (data[6].Equals("0"))
-                Left_xMov = 1;
+                Left_xMov = 0.000015f;
             else if (data[6].Equals("1"))
-                Left_xMov = -1;
+                Left_xMov = -0.000015f;
             else if (data[6].Equals("2"))
                 Left_xMov = 0;
 
