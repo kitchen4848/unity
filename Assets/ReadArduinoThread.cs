@@ -77,7 +77,7 @@ public class ReadArduinoThread : MonoBehaviour
     public void RunMe()
     {
 
-        SerialPort port = new SerialPort("COM6", 9600);
+        SerialPort port = new SerialPort("COM4", 9600);
 
         port.Open();
 
